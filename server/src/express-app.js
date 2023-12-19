@@ -11,7 +11,7 @@ module.exports = async (app) => {
 	app.use(morgan('dev'))
 
 	// api
-	app.use('/property/api/v1', require('./router'))
+	// app.use('/property/api/v1', require('./router'))
 
 	// not found
 	app.use(notFound)

@@ -3,6 +3,7 @@ const http = require('http')
 const expressApp = require('./express-app')
 
 const { PORT } = require('./config/env')
+const { connectDB } = require('./database')
 
 class Server {
 	constructor() {
@@ -13,7 +14,7 @@ class Server {
 
 	async start() {
 		await expressApp(this.app)
-		// await connectDB()
+		await connectDB()
 		this.runServer().setupErrorHandling()
 	}
 
@@ -34,4 +35,4 @@ class Server {
 
 const serverInstance = new Server()
 
-serverInstance.runServer()
+serverInstance.start()
