@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
-const { notFound } = require('./middleware/notFound')
-const { errorHandler } = require('./middleware/errorHandler')
+const { notFound } = require('./middlewares/notFound')
+const { errorHandler } = require('./middlewares/errorHandler')
 const morgan = require('morgan')
 
 module.exports = async (app) => {
@@ -11,7 +11,7 @@ module.exports = async (app) => {
 	app.use(morgan('dev'))
 
 	// api
-	// app.use('/property/api/v1', require('./router'))
+	app.use('/property/api/v1', require('./router'))
 
 	// not found
 	app.use(notFound)

@@ -3,7 +3,7 @@ const http = require('http')
 const expressApp = require('./express-app')
 
 const { PORT } = require('./config/env')
-const { connectDB } = require('./database')
+const { connectDB } = require('./databases')
 
 class Server {
 	constructor() {

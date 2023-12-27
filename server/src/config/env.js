@@ -7,4 +7,6 @@ module.exports = {
 	DB_PASSWORD: process.env.DB_PASSWORD,
 	DB_HOST: process.env.DB_HOST,
 	DB_DIALECT: process.env.DB_DIALECT,
+	APP_SECRET: process.env.APP_SECRET,
+	LIMIT: process.env.LIMIT,
 }

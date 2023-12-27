@@ -1,0 +1,27 @@
+
+
+POST http://localhost:8000/property/api/v1/auth/register
+content-type: application/json
+
+{
+    "fullName": "Nhat Hao",
+    "phone": "0399331473",
+    "password": "Tinh112003@",
+    "email": "admin@gmail.com",
+    "role" : "2222"
+}
+
+
+#######
+POST http://localhost:8000/property/api/v1/auth/login
+content-type: application/json
+
+{
+    "phone": "0399331472",
+    "password": "hao21092002"
+}
+
+#####
+GET http://localhost:8000/property/api/v1/user/current-user
+
+
